@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<!-- Sample file demonstrating/testing stickystack.js functionality -->
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test of StickyStack</title>
+    <style>
+        *{box-sizing:border-box;}body{font-family:sans;margin:0;}h1,h2,h3{width:100%;padding:1em;display:block;}h1{background-color:#a01fed;}h2{background-color:#def10a;}h2:nth-of-type(odd){background-color:#bec10a;}h3{background-color:#a01fed;}div.highlight{background-color:#eda01f;padding:1em;margin:1em 0;}div.highlight2{background-color:#eda0af;padding:1em;margin:1em 0;}.left,.right{width:30%;}.left{float:left;}.right{float:right;}
+    </style>
+
+    <script src="stickystack.js"></script>
+
+</head>
+
+<body>
+
+<h1 class="js-stickystack">A first-level heading</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper fermentum orci. Nullam neque arcu, facilisis id efficitur ac, rhoncus vitae ipsum. Etiam ac fringilla felis. Nulla accumsan enim in mi tincidunt tempus. Suspendisse sagittis velit eros, eget vestibulum leo porta non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus venenatis nulla maximus, gravida risus sed, sagittis quam. Nullam suscipit nunc vitae urna luctus, vitae hendrerit arcu facilisis. Suspendisse laoreet aliquam eleifend. Nulla felis justo, tincidunt eu libero in, egestas accumsan libero.</p>
+
+<p>Etiam laoreet est ut nisi tempor mattis. Curabitur eu orci quis nisl ultricies venenatis. Vivamus blandit ac justo et luctus. Ut sapien sem, congue ut urna quis, vehicula efficitur enim. In in enim gravida, pulvinar neque id, gravida est. Integer auctor, arcu et dignissim faucibus, erat nibh tristique nunc, quis tincidunt dui velit vitae metus. Vestibulum eget fringilla mauris. Nullam finibus urna in ipsum ultricies, et sollicitudin diam condimentum. Nulla tristique libero ac massa luctus, vel rhoncus leo egestas. Phasellus tellus dolor, pretium convallis urna et, consectetur pulvinar massa. Sed at laoreet mauris. Proin mollis augue sit amet libero tristique, eget aliquam augue rhoncus. Nunc lobortis justo dolor, non imperdiet augue pharetra ut.</p>
+
+<h2 class="js-stickystack js-stickystack-nomobile">A second-level non-mobile sticky heading</h2>
+
+<p>Aliquam massa tellus, tincidunt ac enim eget, aliquam molestie turpis. Mauris hendrerit tincidunt libero. In rutrum bibendum orci, nec accumsan ex pretium et. Proin interdum iaculis condimentum. Quisque porttitor, ante eu congue tincidunt, velit nibh vulputate augue, nec vehicula purus metus quis felis. Etiam id lorem ac nisl blandit suscipit rutrum vitae odio. Praesent ut dolor sed dolor viverra varius sodales vel ligula. Cras ultrices eros lacus. In consectetur mollis semper. Nulla orci sapien, placerat a lorem a, gravida eleifend leo. Curabitur volutpat velit non lacus ullamcorper auctor.</p>
+
+<h2 class="js-stickystack js-stickystack-semi">A second-level semi-sticky heading</h2>
+
+<p>Aliquam massa tellus, tincidunt ac enim eget, aliquam molestie turpis. Mauris hendrerit tincidunt libero. In rutrum bibendum orci, nec accumsan ex pretium et. Proin interdum iaculis condimentum. Quisque porttitor, ante eu congue tincidunt, velit nibh vulputate augue, nec vehicula purus metus quis felis. Etiam id lorem ac nisl blandit suscipit rutrum vitae odio. Praesent ut dolor sed dolor viverra varius sodales vel ligula. Cras ultrices eros lacus. In consectetur mollis semper. Nulla orci sapien, placerat a lorem a, gravida eleifend leo. Curabitur volutpat velit non lacus ullamcorper auctor.</p>
+
+<h2 class="js-stickystack">This one's completely sticky</h2>
+
+<p>Aliquam massa tellus, tincidunt ac enim eget, aliquam molestie turpis. Mauris hendrerit tincidunt libero. In rutrum bibendum orci, nec accumsan ex pretium et. Proin interdum iaculis condimentum. Quisque porttitor, ante eu congue tincidunt, velit nibh vulputate augue, nec vehicula purus metus quis felis. Etiam id lorem ac nisl blandit suscipit rutrum vitae odio. Praesent ut dolor sed dolor viverra varius sodales vel ligula. Cras ultrices eros lacus. In consectetur mollis semper. Nulla orci sapien, placerat a lorem a, gravida eleifend leo. Curabitur volutpat velit non lacus ullamcorper auctor.</p>
+
+<p>In faucibus sollicitudin metus, id rutrum nunc elementum vitae. Phasellus maximus enim non dictum euismod. Nullam at tellus sapien. Duis eleifend ac metus eu sollicitudin. Nulla in feugiat mauris, eu suscipit dui. Donec ut rutrum lorem. Sed ac sagittis mauris, vel volutpat quam. Donec mattis, arcu at fringilla aliquet, sapien libero vulputate mauris, aliquet malesuada enim neque quis sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed venenatis, tortor vitae placerat congue, lacus diam interdum erat, non laoreet dui ex molestie nisl. Pellentesque elementum sapien felis, in rutrum lorem placerat id. Nulla facilisi. Etiam tincidunt sit amet mi quis gravida.</p>
+
+<div class="js-stickystack js-stickystack-semi highlight left">
+
+    <p>This div is semi sticky on the left</p>
+
+    <p>Morbi eget elit sollicitudin, fringilla ipsum eu, pulvinar massa. Nullam finibus sollicitudin tortor ac pulvinar. Nam pulvinar augue vel urna ullamcorper, vestibulum condimentum ex blandit.</p>
+
+</div>
+
+<div>
+
+    <p>This div is not sticky</p>
+
+    <p>Morbi eget elit sollicitudin, fringilla ipsum eu, pulvinar massa. Nullam finibus sollicitudin tortor ac pulvinar. Nam pulvinar augue vel urna ullamcorper, vestibulum condimentum ex blandit.</p>
+
+    <p>In faucibus sollicitudin metus, id rutrum nunc elementum vitae. Phasellus maximus enim non dictum euismod. Nullam at tellus sapien. Duis eleifend ac metus eu sollicitudin. Nulla in feugiat mauris, eu suscipit dui. Donec ut rutrum lorem. Sed ac sagittis mauris, vel volutpat quam. Donec mattis, arcu at fringilla aliquet, sapien libero vulputate mauris, aliquet malesuada enim neque quis sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed venenatis, tortor vitae placerat congue, lacus diam interdum erat, non laoreet dui ex molestie nisl. Pellentesque elementum sapien felis, in rutrum lorem placerat id. Nulla facilisi. Etiam tincidunt sit amet mi quis gravida.</p>
+
+</div>
+
+<div class="js-stickystack js-stickystack-semi highlight right">
+
+    <p>This div is semi sticky on the right</p>
+
+    <p>Morbi eget elit sollicitudin, fringilla ipsum eu, pulvinar massa. Nullam finibus sollicitudin tortor ac pulvinar. Nam pulvinar augue vel urna ullamcorper, vestibulum condimentum ex blandit.</p>
+
+</div>
+
+<div>
+
+    <p>This div is not sticky</p>
+
+    <p>Morbi eget elit sollicitudin, fringilla ipsum eu, pulvinar massa. Nullam finibus sollicitudin tortor ac pulvinar. Nam pulvinar augue vel urna ullamcorper, vestibulum condimentum ex blandit.</p>
+
+    <p>Aliquam massa tellus, tincidunt ac enim eget, aliquam molestie turpis. Mauris hendrerit tincidunt libero. In rutrum bibendum orci, nec accumsan ex pretium et. Proin interdum iaculis condimentum. Quisque porttitor, ante eu congue tincidunt, velit nibh vulputate augue, nec vehicula purus metus quis felis. Etiam id lorem ac nisl blandit suscipit rutrum vitae odio. Praesent ut dolor sed dolor viverra varius sodales vel ligula. Cras ultrices eros lacus. In consectetur mollis semper. Nulla orci sapien, placerat a lorem a, gravida eleifend leo. Curabitur volutpat velit non lacus ullamcorper auctor.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper fermentum orci. Nullam neque arcu, facilisis id efficitur ac, rhoncus vitae ipsum. Etiam ac fringilla felis. Nulla accumsan enim in mi tincidunt tempus. Suspendisse sagittis velit eros, eget vestibulum leo porta non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus venenatis nulla maximus, gravida risus sed, sagittis quam. Nullam suscipit nunc vitae urna luctus, vitae hendrerit arcu facilisis. Suspendisse laoreet aliquam eleifend. Nulla felis justo, tincidunt eu libero in, egestas accumsan libero.</p>
+
+    <p>Etiam laoreet est ut nisi tempor mattis. Curabitur eu orci quis nisl ultricies venenatis. Vivamus blandit ac justo et luctus. Ut sapien sem, congue ut urna quis, vehicula efficitur enim. In in enim gravida, pulvinar neque id, gravida est. Integer auctor, arcu et dignissim faucibus, erat nibh tristique nunc, quis tincidunt dui velit vitae metus. Vestibulum eget fringilla mauris. Nullam finibus urna in ipsum ultricies, et sollicitudin diam condimentum. Nulla tristique libero ac massa luctus, vel rhoncus leo egestas. Phasellus tellus dolor, pretium convallis urna et, consectetur pulvinar massa. Sed at laoreet mauris. Proin mollis augue sit amet libero tristique, eget aliquam augue rhoncus. Nunc lobortis justo dolor, non imperdiet augue pharetra ut.</p>
+
+</div>
+
+<div class="js-stickystack highlight2">
+
+    <p>This div is sticky</p>
+
+    <p>Morbi eget elit sollicitudin, fringilla ipsum eu, pulvinar massa. Nullam finibus sollicitudin tortor ac pulvinar. Nam pulvinar augue vel urna ullamcorper, vestibulum condimentum ex blandit.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum, tortor eu lacinia lacinia, mi nulla luctus leo, eget pharetra orci magna porta ligula. Quisque viverra pharetra iaculis. Fusce in lectus nec mi viverra dignissim non ut massa. Aliquam tristique diam quis diam dictum feugiat. Cras euismod quis elit a pharetra. Mauris finibus, nisl eget dictum suscipit, lectus ligula faucibus orci, nec vestibulum nisl velit nec diam. Donec laoreet nec tortor a mollis. Vivamus ac mauris sodales, varius dui ac, facilisis velit. Etiam tincidunt mauris quis sem malesuada ornare. Nulla pellentesque nisl nec orci convallis, id varius neque elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+
+</div>
+
+<div>
+
+    <p>This div is not sticky</p>
+
+    <p>Morbi eget elit sollicitudin, fringilla ipsum eu, pulvinar massa. Nullam finibus sollicitudin tortor ac pulvinar. Nam pulvinar augue vel urna ullamcorper, vestibulum condimentum ex blandit.</p>
+
+</div>
+
+<div>
+
+    <p>This div is not sticky</p>
+
+    <p>Morbi eget elit sollicitudin, fringilla ipsum eu, pulvinar massa. Nullam finibus sollicitudin tortor ac pulvinar. Nam pulvinar augue vel urna ullamcorper, vestibulum condimentum ex blandit.</p>
+
+</div>
+
+<h3>Here's a bunch of text to make sure the page is scrollable</h3>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum, tortor eu lacinia lacinia, mi nulla luctus leo, eget pharetra orci magna porta ligula. Quisque viverra pharetra iaculis. Fusce in lectus nec mi viverra dignissim non ut massa. Aliquam tristique diam quis diam dictum feugiat. Cras euismod quis elit a pharetra. Mauris finibus, nisl eget dictum suscipit, lectus ligula faucibus orci, nec vestibulum nisl velit nec diam. Donec laoreet nec tortor a mollis. Vivamus ac mauris sodales, varius dui ac, facilisis velit. Etiam tincidunt mauris quis sem malesuada ornare. Nulla pellentesque nisl nec orci convallis, id varius neque elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+
+<P>Proin facilisis placerat dui, non aliquet neque pulvinar quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar, eros sit amet mollis dictum, nulla lorem luctus ligula, sed faucibus neque odio efficitur metus. Praesent lobortis nec justo non venenatis. Sed lacinia, erat vel tempus aliquam, velit mauris aliquet nibh, sit amet congue justo enim in ante. Sed feugiat non diam at ultricies. Vivamus faucibus, lacus id porta ornare, orci purus semper purus, sed ornare massa lacus vel lorem. Nulla pulvinar metus sem, et pulvinar justo tempor nec. In tristique, sapien vitae pellentesque lacinia, felis massa sagittis magna, ac tristique tortor est eu tortor. Pellentesque aliquet quam non nibh eleifend, ut rhoncus risus aliquam. Praesent est massa, bibendum et turpis sed, ultrices egestas leo.</p>
+
+<p>Nam id suscipit leo. Nulla facilisi. Aenean volutpat porttitor sapien. Nullam in quam id justo viverra sagittis eu vel tortor. Maecenas ex elit, efficitur id quam at, egestas volutpat erat. Duis mollis nec elit vehicula tempus. Nullam et sagittis metus, nec pretium magna. Phasellus faucibus porttitor sem in euismod.</p>
+
+<p>Sed convallis nibh in orci auctor, quis gravida erat pharetra. Nunc faucibus turpis enim, id tincidunt nisl imperdiet nec. Suspendisse malesuada risus ac dictum vestibulum. Aenean iaculis neque viverra nunc pharetra egestas. In tincidunt feugiat convallis. In luctus venenatis accumsan. Curabitur pretium dictum fringilla. Aliquam porta mi in dolor condimentum consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet enim mauris, eget dictum lectus sagittis vitae. Mauris eget mi faucibus, eleifend ante quis, aliquet risus. Vivamus blandit dolor ac pharetra condimentum. Nullam in lacus diam. In nec neque elit.</p>
+
+<p>Nulla quis quam gravida, molestie nisl euismod, tempus ligula. Praesent sodales, orci eu eleifend posuere, ex quam consectetur tortor, ac sodales magna felis dapibus est. Morbi dignissim mi mattis magna tempus commodo. Sed pellentesque sem augue, dignissim convallis lacus mollis non. Sed eu justo dictum, condimentum leo non, dictum dui. Nam pretium leo nec ligula vestibulum ultricies. Phasellus condimentum aliquet magna, ac aliquet est malesuada ut. Quisque enim elit, eleifend ac risus quis, condimentum consectetur orci. Sed nibh ex, posuere ut molestie pellentesque, bibendum ut turpis. Curabitur sed sodales tortor, eget aliquet justo. Nunc vulputate faucibus cursus. Phasellus id ante ac felis mollis dictum. Phasellus vitae mi ante. Donec at tellus fermentum, iaculis lectus quis, hendrerit odio.</p>
+
+</body>
+</html>
