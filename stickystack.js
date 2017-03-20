@@ -227,7 +227,7 @@ let StickyStack = {
 
     },
 
-    stopObserving : function () {return;
+    stopObserving : function () {
         if (StickyStack.observer) {
             StickyStack.observer.disconnect();
         }

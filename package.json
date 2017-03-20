@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "uglify-js": "github:mishoo/UglifyJS2#harmony"
+  }
+}
