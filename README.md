@@ -10,7 +10,7 @@ Just include `stickystack.js` in your page's javascript, and add appropriate cla
 
 Apply appropriate styles to the elements you want to be involved with the stickyness:
 
-* `js-stickystack` -- Elements that should be sticky under certain circumstances
+* `js-stickystack` -- Elements that should become sticky instead of scrolling offscreen
 
 * `js-stickystack-top` -- The element whose top edge should be considered the point at which stickyness begins. This allows external toolbars and other elements that may have other stickyness to remain visible. (Can be applied to an element without the `js-stickystack` class.)
 
@@ -24,4 +24,6 @@ Elements with the `js-stickystack`can be further modified by adding the classes 
 
 ## How it works
 
-[More detail coming soon, but basically it gathers a list of sticky HTML elements based on class, creates a set of placeholders that get actived when the respective element is taken out of the layout flow by assigning `position: fixed;`, and assigns CSS `top` and `z-index` values based on page scroll and the stickystack heirarchy.]
+More detail coming soon, but basically it gathers a list of sticky HTML elements based on class, creates a set of placeholders that get actived when the respective element is taken out of the layout flow by assigning `position: fixed;`, and assigns CSS `top` and `z-index` values based on page scroll and the stickystack heirarchy.
+
+"Stuck" elements get class `stickystack-stuck` added to them (and removed when they become unstuck) making it simple to apply theming changes when an element becomes stuck.
