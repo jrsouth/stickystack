@@ -1,11 +1,9 @@
 /* StickyStack
+ *
  * A vanilla javascript sticky-element stacker
  *
- * Apply class "js-stickystack" to any elements you
- * want to stack at the top of the screen.
- *
- * Now accounts for horizontal placement, at the
- * (temporary) expense of semi-sticky functionality.
+ * For details and usage see:
+ * https://github.com/jrsouth/stickystack
  *
  */
 
