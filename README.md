@@ -12,7 +12,7 @@ Apply appropriate styles to the elements you want to be involved with the sticky
 
 * `js-stickystack` -- Elements that should be sticky under certain circumstances
 
-* 'js-stickystack-top' -- The element whose top edge should be considered the point at which stickyness begins. This allows external toolbars and other elements that may have other stickyness to remain visible. (Can be applied to an element without the `js-stickystack` class.)
+* `js-stickystack-top` -- The element whose top edge should be considered the point at which stickyness begins. This allows external toolbars and other elements that may have other stickyness to remain visible. (Can be applied to an element without the `js-stickystack` class.)
 
 ### Modifiers
 
