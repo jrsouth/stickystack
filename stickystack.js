@@ -117,16 +117,12 @@ let StickyStack = {
         elementList = document.getElementsByClassName('js-stickystack-top');
         for (let i = 0; i < elementList.length ; i++) {
             let top = StickyStack.getCoords(elementList[i]).top;
-            console.log(top);
             if (i == 0) {
                 StickyStack.stackTop = top;
             } else {
                 StickyStack.stackTop = Math.min(StickyStack.stackTop, top);
             }
         }
-
-        console.log(elementList);
-        console.log(StickyStack.stackTop);
 
         // Fire the initial calculation
         StickyStack.update();
