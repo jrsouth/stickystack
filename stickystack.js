@@ -1,8 +1,10 @@
-/* StickyStack
+/* @preserve
+ *
+ * StickyStack
  *
  * A vanilla javascript sticky-element stacker
  *
- * For details and usage see:
+ * For licence details and usage see:
  * https://github.com/jrsouth/stickystack
  *
  */
