@@ -111,17 +111,22 @@ let StickyStack = {
         // Set the stack top to (the top of) the highest-placed element
         // with the js-stickystack-top class. Note that this element
         // does not have to be sticky itself
+        // Defaults to 0 (the top of the viewport) if no elements are found.
         StickyStack.stackTop = 0;
 
         elementList = document.getElementsByClassName('js-stickystack-top');
         for (let i = 0; i < elementList.length ; i++) {
             let top = StickyStack.getCoords(elementList[i]).top;
-            if (StickyStack.stackTop == 0) {
+            console.log(top);
+            if (i == 0) {
                 StickyStack.stackTop = top;
             } else {
                 StickyStack.stackTop = Math.min(StickyStack.stackTop, top);
             }
         }
+
+        console.log(elementList);
+        console.log(StickyStack.stackTop);
 
         // Fire the initial calculation
         StickyStack.update();
