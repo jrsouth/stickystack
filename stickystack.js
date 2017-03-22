@@ -101,7 +101,7 @@ let StickyStack = {
                 width       : parseFloat(style.getPropertyValue("width")),
                 placeholder : placeholderElement,
                 semistuck   : StickyStack.hasClass(elementList[i], 'js-stickystack-semi'),
-                zIndex      : 10000 - i
+                zIndex      : 100 - i
             });
         }
 
