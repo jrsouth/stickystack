@@ -305,12 +305,16 @@ let StickyStack = {
 
 
 // Set up listeners to fire on load and scroll
+window.addEventListener('DOMContentLoaded', StickyStack.init);
 window.addEventListener('load', StickyStack.init);
 window.addEventListener('resize', StickyStack.init);
 window.addEventListener('scroll', StickyStack.update);
 
-// Trigger a delayed extra recalculation, in case elements change
+// Trigger delayed extra recalculations, in case elements change
 // size as a result of the first init() call.
+window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function () { StickyStack.update(); }, 500);
+});
 window.addEventListener('load', function() {
     setTimeout(function () { StickyStack.update(); }, 500);
 });
