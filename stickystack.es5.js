@@ -11,7 +11,7 @@
  *
  */
 
-{
+(function () {
     "use strict";
 
     var StickyStack = {
@@ -134,7 +134,7 @@
         update: function update() {
 
             var stack = [[StickyStack.stackTop, 0, document.body.offsetWidth]];
-            var pageOffset = window.pageYOffset;
+            var pageOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
             for (var i = 0; i < StickyStack.number; i++) {
 
@@ -297,11 +297,20 @@
 
     };
 
-    // Set up listeners to fire on load and scroll
+    // Set up listeners to fire on load
     window.addEventListener('DOMContentLoaded', StickyStack.init);
     window.addEventListener('load', StickyStack.init);
     window.addEventListener('resize', StickyStack.init);
+
+    // Set up listeners to fire on scroll
     window.addEventListener('scroll', StickyStack.update);
+    window.addEventListener('touchmove', StickyStack.update);
+
+    // Add a hacky empty function to cause iOS to update the scroll offset value while scrolling
+    // Still doesn't update during momentum scrolling
+    // From https://remysharp.com/2012/05/24/issues-with-position-fixed-scrolling-on-ios/
+    // TODO: Check if needed now that touchmove event has update() attached
+    window.ontouchstart = function () {};
 
     // Trigger delayed extra recalculations, in case elements change
     // size as a result of the first init() call.
@@ -315,4 +324,4 @@
             StickyStack.update();
         }, 500);
     });
-}
+})();
