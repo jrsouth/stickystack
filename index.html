@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <title>Test of StickyStack</title>
     <style>
-        *{box-sizing:border-box;}body{font-family:sans;margin:0;}h1,h2,h3{width:100%;padding:1em;display:block;}h1{background-color:#a01fed;}h2{background-color:#def10a;}h2:nth-of-type(odd){background-color:#bec10a;}h3{background-color:#a01fed;}div.highlight{background-color:#eda01f;padding:1em;margin:1em 0;}div.highlight2{background-color:#eda0af;padding:1em;margin:1em 0;}.left,.right{width:30%;}.left{float:left;}.right{float:right;}
+        *{box-sizing:border-box;}body{font-family:sans-serif;margin:0;}h1,h2,h3{width:100%;padding:1em;display:block;}h1{background-color:#a01fed;}h2{background-color:#def10a;}h2:nth-of-type(odd){background-color:#bec10a;}h3{background-color:#a01fed;}div.highlight{background-color:#eda01f;padding:1em;margin:1em 0;}div.highlight2{background-color:#eda0af;padding:1em;margin:1em 0;}.left,.right{width:30%;}.left{float:left;}.right{float:right;}
     </style>
 
     <script src="stickystack.js"></script>
@@ -37,6 +37,7 @@
 
 <p>In faucibus sollicitudin metus, id rutrum nunc elementum vitae. Phasellus maximus enim non dictum euismod. Nullam at tellus sapien. Duis eleifend ac metus eu sollicitudin. Nulla in feugiat mauris, eu suscipit dui. Donec ut rutrum lorem. Sed ac sagittis mauris, vel volutpat quam. Donec mattis, arcu at fringilla aliquet, sapien libero vulputate mauris, aliquet malesuada enim neque quis sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed venenatis, tortor vitae placerat congue, lacus diam interdum erat, non laoreet dui ex molestie nisl. Pellentesque elementum sapien felis, in rutrum lorem placerat id. Nulla facilisi. Etiam tincidunt sit amet mi quis gravida.</p>
 
+
 <div class="js-stickystack js-stickystack-semi highlight left">
 
     <p>This div is semi sticky</p>
@@ -44,6 +45,7 @@
     <p>Morbi eget elit sollicitudin, fringilla ipsum eu, pulvinar massa. Nullam finibus sollicitudin tortor ac pulvinar. Nam pulvinar augue vel urna ullamcorper, vestibulum condimentum ex blandit.</p>
 
 </div>
+
 
 <div>
 
@@ -55,6 +57,7 @@
 
 </div>
 
+
 <div class="js-stickystack js-stickystack-semi highlight right">
 
     <p>This div is semi sticky</p>
@@ -62,6 +65,7 @@
     <p>Morbi eget elit sollicitudin, fringilla ipsum eu, pulvinar massa. Nullam finibus sollicitudin tortor ac pulvinar. Nam pulvinar augue vel urna ullamcorper, vestibulum condimentum ex blandit.</p>
 
 </div>
+
 
 <div>
 
@@ -77,6 +81,7 @@
 
 </div>
 
+
 <div class="js-stickystack highlight2">
 
     <p>This div is sticky</p>
@@ -87,13 +92,6 @@
 
 </div>
 
-<div>
-
-    <p>This div is not sticky</p>
-
-    <p>Morbi eget elit sollicitudin, fringilla ipsum eu, pulvinar massa. Nullam finibus sollicitudin tortor ac pulvinar. Nam pulvinar augue vel urna ullamcorper, vestibulum condimentum ex blandit.</p>
-
-</div>
 
 <div>
 
@@ -102,6 +100,16 @@
     <p>Morbi eget elit sollicitudin, fringilla ipsum eu, pulvinar massa. Nullam finibus sollicitudin tortor ac pulvinar. Nam pulvinar augue vel urna ullamcorper, vestibulum condimentum ex blandit.</p>
 
 </div>
+
+
+<div>
+
+    <p>This div is not sticky</p>
+
+    <p>Morbi eget elit sollicitudin, fringilla ipsum eu, pulvinar massa. Nullam finibus sollicitudin tortor ac pulvinar. Nam pulvinar augue vel urna ullamcorper, vestibulum condimentum ex blandit.</p>
+
+</div>
+
 
 <h3>Here's a bunch of text to make sure the page is scrollable</h3>
 
@@ -111,19 +119,20 @@
 
 <p>Nam id suscipit leo. Nulla facilisi. Aenean volutpat porttitor sapien. Nullam in quam id justo viverra sagittis eu vel tortor. Maecenas ex elit, efficitur id quam at, egestas volutpat erat. Duis mollis nec elit vehicula tempus. Nullam et sagittis metus, nec pretium magna. Phasellus faucibus porttitor sem in euismod.</p>
 
+
 <div id="footer" class="js-stickystack js-stickystack-semi highlight">
 
-<h2>And here's a massive footer</h2>
+    <h4>And here's a massive footer</h4>
 
-<p>It's set to <pre>js-stickystack-semi</pre>, which means the bottom edge of the page will push it up and under the non-<pre>semi</pre> elements.</p> 
+    <p>It's set to <code>js-stickystack-semi</code>, which means the bottom edge of the page will push it up and under the non-<code>semi</code> elements.</p>
 
-<p>Sed convallis nibh in orci auctor, quis gravida erat pharetra. Nunc faucibus turpis enim, id tincidunt nisl imperdiet nec. Suspendisse malesuada risus ac dictum vestibulum. Aenean iaculis neque viverra nunc pharetra egestas. In tincidunt feugiat convallis. In luctus venenatis accumsan. Curabitur pretium dictum fringilla. Aliquam porta mi in dolor condimentum consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet enim mauris, eget dictum lectus sagittis vitae. Mauris eget mi faucibus, eleifend ante quis, aliquet risus. Vivamus blandit dolor ac pharetra condimentum. Nullam in lacus diam. In nec neque elit.</p>
+    <p>Sed convallis nibh in orci auctor, quis gravida erat pharetra. Nunc faucibus turpis enim, id tincidunt nisl imperdiet nec. Suspendisse malesuada risus ac dictum vestibulum. Aenean iaculis neque viverra nunc pharetra egestas. In tincidunt feugiat convallis. In luctus venenatis accumsan. Curabitur pretium dictum fringilla. Aliquam porta mi in dolor condimentum consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet enim mauris, eget dictum lectus sagittis vitae. Mauris eget mi faucibus, eleifend ante quis, aliquet risus. Vivamus blandit dolor ac pharetra condimentum. Nullam in lacus diam. In nec neque elit.</p>
 
-<p>Sed convallis nibh in orci auctor, quis gravida erat pharetra. Nunc faucibus turpis enim, id tincidunt nisl imperdiet nec. Suspendisse malesuada risus ac dictum vestibulum. Aenean iaculis neque viverra nunc pharetra egestas. In tincidunt feugiat convallis. In luctus venenatis accumsan. Curabitur pretium dictum fringilla. Aliquam porta mi in dolor condimentum consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet enim mauris, eget dictum lectus sagittis vitae. Mauris eget mi faucibus, eleifend ante quis, aliquet risus. Vivamus blandit dolor ac pharetra condimentum. Nullam in lacus diam. In nec neque elit.</p>
+    <p>Sed convallis nibh in orci auctor, quis gravida erat pharetra. Nunc faucibus turpis enim, id tincidunt nisl imperdiet nec. Suspendisse malesuada risus ac dictum vestibulum. Aenean iaculis neque viverra nunc pharetra egestas. In tincidunt feugiat convallis. In luctus venenatis accumsan. Curabitur pretium dictum fringilla. Aliquam porta mi in dolor condimentum consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet enim mauris, eget dictum lectus sagittis vitae. Mauris eget mi faucibus, eleifend ante quis, aliquet risus. Vivamus blandit dolor ac pharetra condimentum. Nullam in lacus diam. In nec neque elit.</p>
 
-<p>Sed convallis nibh in orci auctor, quis gravida erat pharetra. Nunc faucibus turpis enim, id tincidunt nisl imperdiet nec. Suspendisse malesuada risus ac dictum vestibulum. Aenean iaculis neque viverra nunc pharetra egestas. In tincidunt feugiat convallis. In luctus venenatis accumsan. Curabitur pretium dictum fringilla. Aliquam porta mi in dolor condimentum consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet enim mauris, eget dictum lectus sagittis vitae. Mauris eget mi faucibus, eleifend ante quis, aliquet risus. Vivamus blandit dolor ac pharetra condimentum. Nullam in lacus diam. In nec neque elit.</p>
+    <p>Sed convallis nibh in orci auctor, quis gravida erat pharetra. Nunc faucibus turpis enim, id tincidunt nisl imperdiet nec. Suspendisse malesuada risus ac dictum vestibulum. Aenean iaculis neque viverra nunc pharetra egestas. In tincidunt feugiat convallis. In luctus venenatis accumsan. Curabitur pretium dictum fringilla. Aliquam porta mi in dolor condimentum consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet enim mauris, eget dictum lectus sagittis vitae. Mauris eget mi faucibus, eleifend ante quis, aliquet risus. Vivamus blandit dolor ac pharetra condimentum. Nullam in lacus diam. In nec neque elit.</p>
 
-<p>Nulla quis quam gravida, molestie nisl euismod, tempus ligula. Praesent sodales, orci eu eleifend posuere, ex quam consectetur tortor, ac sodales magna felis dapibus est. Morbi dignissim mi mattis magna tempus commodo. Sed pellentesque sem augue, dignissim convallis lacus mollis non. Sed eu justo dictum, condimentum leo non, dictum dui. Nam pretium leo nec ligula vestibulum ultricies. Phasellus condimentum aliquet magna, ac aliquet est malesuada ut. Quisque enim elit, eleifend ac risus quis, condimentum consectetur orci. Sed nibh ex, posuere ut molestie pellentesque, bibendum ut turpis. Curabitur sed sodales tortor, eget aliquet justo. Nunc vulputate faucibus cursus. Phasellus id ante ac felis mollis dictum. Phasellus vitae mi ante. Donec at tellus fermentum, iaculis lectus quis, hendrerit odio.</p>
+    <p>Nulla quis quam gravida, molestie nisl euismod, tempus ligula. Praesent sodales, orci eu eleifend posuere, ex quam consectetur tortor, ac sodales magna felis dapibus est. Morbi dignissim mi mattis magna tempus commodo. Sed pellentesque sem augue, dignissim convallis lacus mollis non. Sed eu justo dictum, condimentum leo non, dictum dui. Nam pretium leo nec ligula vestibulum ultricies. Phasellus condimentum aliquet magna, ac aliquet est malesuada ut. Quisque enim elit, eleifend ac risus quis, condimentum consectetur orci. Sed nibh ex, posuere ut molestie pellentesque, bibendum ut turpis. Curabitur sed sodales tortor, eget aliquet justo. Nunc vulputate faucibus cursus. Phasellus id ante ac felis mollis dictum. Phasellus vitae mi ante. Donec at tellus fermentum, iaculis lectus quis, hendrerit odio.</p>
 
 </div>
 </body>
