@@ -158,8 +158,6 @@
 
         update : function () {
 
-            console.log(StickyStack.list);
-
             let stack = [[StickyStack.stackTop, 0, document.body.offsetWidth]];
             let pageOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
