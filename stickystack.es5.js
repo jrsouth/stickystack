@@ -20,12 +20,17 @@
         list: [],
         number: 0,
         stackTop: 0,
+        pageBottom: null,
 
         init: function init() {
 
             StickyStack.stopObserving();
 
             // Clean up if init already run
+            if (StickyStack.pageBottom) {
+                StickyStack.pageBottom.parentNode.removeChild(StickyStack.pageBottom);
+            }
+
             for (var i = 0; i < StickyStack.number; i++) {
 
                 var placeholder = StickyStack.list[i].placeholder;
@@ -41,7 +46,19 @@
                 currElement.style.marginTop = null;
                 currElement.style.marginBottom = null;
             }
-            // And reset StickyStack.number
+
+            // Create element to push bottom of the page up
+
+            //        <div style="height:0;width:100%;" class="js-stickystack"></div>
+
+            StickyStack.pageBottom = document.createElement('div');
+            StickyStack.pageBottom.style.height = 0;
+            StickyStack.pageBottom.style.width = "100%";
+            StickyStack.addClass(StickyStack.pageBottom, "js-stickystack");
+
+            document.body.appendChild(StickyStack.pageBottom);
+
+            // Reset StickyStack.number
             StickyStack.number = 0;
 
             // Get elements with 'js-stickystack' class
@@ -112,8 +129,14 @@
 
             // Set the stack top to (the top of) the highest-placed element
             // with the js-stickystack-top class. Note that this element
-            // does not have to be sticky itself
+            // does not have to be sticky itself (otherwise we could just use the
+            // existing vertically-sorted list).
+            //
+            // This allows other sticky elements (admin toolbars etc.) to
+            // peacefully co-exist with StickyStack.
+            //
             // Defaults to 0 (the top of the viewport) if no elements are found.
+
             StickyStack.stackTop = 0;
 
             elementList = document.getElementsByClassName('js-stickystack-top');
@@ -132,6 +155,8 @@
         },
 
         update: function update() {
+
+            console.log(StickyStack.list);
 
             var stack = [[StickyStack.stackTop, 0, document.body.offsetWidth]];
             var pageOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -156,11 +181,10 @@
 
                     var scrollback = 0;
 
-                    // TODO If "semi" sticky, need to check whether anything directly underneath is pushing it up
-                    // Currently broken
-                    // now we're also checking for horizontal impacts
+                    // Semi-sticky handling
 
-                    // Only bother checking if this element is "semistuck" and there are further elements in the list
+                    // Only bother if this element is "semistuck" and there are
+                    // further elements in the list.
                     if (StickyStack.list[i].semistuck && i + 1 < StickyStack.number) {
 
                         var tempStack = [[overlapData.absolute + currElement.offsetHeight, currLeft, currWidth]];
